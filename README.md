@@ -11,10 +11,24 @@ Démarrer les 3 conteneurs (instances):
 docker-compose up -d
 ```
 
-Connexion aux conteneurs via la commande:
+### Configurer le cluster sur master
 
 ```bash
-docker exec -it mongoX bash
+docker exec -it mongo1 bash
+```
+
+```bash
+/scripts/init_script.sh
+```
+
+### COnfigurer le cluster sur les replicas
+
+```bash
+docker exec -it mongo2 bash
+```
+
+```bash
+/scripts/init_replicas.sh
 ```
 
 ## Insertion
